@@ -15,7 +15,7 @@ require("codecompanion").setup({
             default = "x-ai/grok-4-fast:free",
           },
           max_tokens = {
-            default = 1000,
+            default = 2000,
           },
         },
       })
