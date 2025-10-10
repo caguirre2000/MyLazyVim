@@ -12,7 +12,12 @@ require("codecompanion").setup({
         },
         schema = {
           model = {
-            default = "x-ai/grok-4-fast:free",
+            default = "nvidia/nemotron-nano-9b-v2:free",
+            choices = {
+              "deepseek/deepseek-chat-v3.1:free",
+              "nvidia/nemotron-nano-9b-v2:free",
+              "openai/gpt-oss-20b:free",
+            },
           },
           max_tokens = {
             default = 2000,
@@ -24,15 +29,15 @@ require("codecompanion").setup({
   strategies = {
     chat = {
       adapter = "openrouter",
-      model = "x-ai/grok-4-fast:free",
+      -- model = "deepseek/deepseek-chat-v3.1:free",
     },
     inline = {
       adapter = "openrouter",
-      model = "x-ai/grok-4-fast:free",
+      -- model = "deepseek/deepseek-chat-v3.1:free",
     },
     cmd = {
       adapter = "openrouter",
-      model = "x-ai/grok-4-fast:free",
+      -- model = "deepseek/deepseek-chat-v3.1:free",
     },
   },
   opts = {
